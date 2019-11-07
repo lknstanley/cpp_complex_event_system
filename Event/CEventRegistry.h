@@ -1,0 +1,37 @@
+#pragma once
+class CEvent;
+class CEventEntity;
+class IEventListener;
+
+class CEventRegistry
+{
+public:
+	enum { EMaxEvents = 8 };
+
+	CEvent* m_acEvents[ EMaxEvents ];
+	int		m_iEventCount;
+
+	CEventRegistry( void )
+		: m_iEventCount( 0 )
+	{
+	}
+
+	//////////////////////////////////////////////////////////////////////////
+	// Add / Remove / Get event
+	//////////////////////////////////////////////////////////////////////////
+	void RegisterEvent( CEvent*	pcEvent );
+	void UnRegisterEvent( const char* pszName );
+	CEvent* GetEvent( const char* pszName );
+
+	//////////////////////////////////////////////////////////////////////////
+	// Listen / Unlisten to an event
+	//////////////////////////////////////////////////////////////////////////
+	void ListenToEvent( const char*	pszName, IEventListener* pcListener );
+	void UnlistenToEvent( const char* pszName, IEventListener* pcListener );
+
+	//////////////////////////////////////////////////////////////////////////
+	// Trigger event
+	//////////////////////////////////////////////////////////////////////////
+	void SendEvent( const char* pszName, CEventEntity* pcEventData );
+};
+
