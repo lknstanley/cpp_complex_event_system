@@ -1,2 +1,6 @@
-﻿  Event.cpp
+﻿  CEventEntity.cpp
+c:\projects\bcu\module_2_homework\cpp_complex_event_system\event\cevententity.cpp(75): warning C4018: '<': signed/unsigned mismatch
+c:\projects\bcu\module_2_homework\cpp_complex_event_system\event\cevententity.cpp(87): warning C4018: '<': signed/unsigned mismatch
+  CEventRegistry.cpp
+  Generating Code...
   Event.vcxproj -> C:\Projects\BCU\Module_2_Homework\cpp_complex_event_system\Debug\Event.exe

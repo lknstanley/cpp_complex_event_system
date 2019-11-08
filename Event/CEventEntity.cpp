@@ -29,13 +29,14 @@ void CEventEntity::Set( std::string strKey, void * pContent )
 	}
 }
 
-void * CEventEntity::Get( std::string strKey )
+void* CEventEntity::Get( std::string strKey )
 {
 	int iIndexOfList = FindIndex( strKey );
 	if( iIndexOfList != -1 )
 	{
 		return m_vecDictionary.at( iIndexOfList ).pContent;
 	}
+	return nullptr;
 }
 
 void CEventEntity::SetString( std::string strKey, std::string* strContent )

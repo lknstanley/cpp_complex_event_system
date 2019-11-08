@@ -45,7 +45,7 @@ void CEventRegistry::UnlistenToEvent( const char* pszName, IEventListener* pcLis
 	}
 }
 
-CEvent * CEventRegistry::GetEvent( const char * pszName )
+CEvent* CEventRegistry::GetEvent( const char * pszName )
 {
 	for( int iLoop = 0; iLoop < m_iEventCount; ++iLoop )
 	{
@@ -54,6 +54,7 @@ CEvent * CEventRegistry::GetEvent( const char * pszName )
 			return m_acEvents[ iLoop ];
 		}
 	}
+	return nullptr;
 }
 
 void CEventRegistry::SendEvent( const char * pszName, CEventEntity* pcEventData )
