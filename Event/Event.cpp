@@ -71,7 +71,8 @@ int _tmain( int argc, _TCHAR* argv[] )
 
 	// Create message content
 	CEventEntity* cDaveEventEntity = new CEventEntity();
-	cDaveEventEntity->SetString( "message", "this is the content" );
+	std::string strContent = "this is the content";
+	cDaveEventEntity->SetString( "message", &strContent );
 
 	// Send a "Dave" event
 	cEventRegistry.SendEvent( "Dave", cDaveEventEntity );
@@ -79,10 +80,16 @@ int _tmain( int argc, _TCHAR* argv[] )
 	cEventRegistry.SendEvent( "ToUnlisten", cDaveEventEntity );
 	
 	// (5) UnregisterEvent and UnlistenEvent
+	cEventRegistry.SendEvent( "Dave", cDaveEventEntity );
+
+	std::cout << "Unregistered event: Tpunregister" << std::endl;
 	cEventRegistry.UnRegisterEvent( "ToUnregister" );
+	std::cout << "Send event: Tpunregister" << std::endl;
 	cEventRegistry.SendEvent( "ToUnregister", cDaveEventEntity );
 
+	std::cout << "Unregistered event: ToUnlisten" << std::endl;
 	cEventRegistry.UnlistenToEvent( "ToUnlisten", &cDemoGame );
+	std::cout << "Send event: ToUnlisten" << std::endl;
 	cEventRegistry.SendEvent( "ToUnlisten", cDaveEventEntity );
 
 	// Pause console

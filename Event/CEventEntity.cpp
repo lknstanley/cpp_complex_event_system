@@ -38,21 +38,20 @@ void * CEventEntity::Get( std::string strKey )
 	}
 }
 
-void CEventEntity::SetString( std::string strKey, std::string strContent )
+void CEventEntity::SetString( std::string strKey, std::string* strContent )
 {
-	Set( strKey, static_cast< void* >( &strContent ) );
+	Set( strKey, static_cast< void* >( strContent ) );
 }
 
 std::string CEventEntity::GetString( std::string strKey )
 {
 	std::string& pStr = *( static_cast< std::string* >( Get( strKey ) ) );
-	std::cout << pStr << std::endl;
-	return "";
+	return pStr;
 }
 
-void CEventEntity::SetFloat( std::string strKey, float fContent )
+void CEventEntity::SetFloat( std::string strKey, float* fContent )
 {
-	Set( strKey, static_cast< void* >( &fContent ) );
+	Set( strKey, static_cast< void* >( fContent ) );
 }
 
 float CEventEntity::GetFloat( std::string strKey )
@@ -60,9 +59,9 @@ float CEventEntity::GetFloat( std::string strKey )
 	return *static_cast< float* >( Get( strKey ) );
 }
 
-void CEventEntity::SetBoolean( std::string strKey, bool bContent )
+void CEventEntity::SetBoolean( std::string strKey, bool* bContent )
 {
-	Set( strKey, static_cast< void* >( &bContent ) );
+	Set( strKey, static_cast< void* >( bContent ) );
 }
 
 bool CEventEntity::GetBoolean( std::string strKey )

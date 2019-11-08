@@ -23,13 +23,13 @@ public:
 	//////////////////////////////////////////////////////////////////////////
 	// Control interface
 	//////////////////////////////////////////////////////////////////////////
-	void SetString( std::string strKey, std::string strContent );
+	void SetString( std::string strKey, std::string* strContent );
 	std::string GetString( std::string strKey );
 
-	void SetFloat( std::string strKey, float fContent );
+	void SetFloat( std::string strKey, float* fContent );
 	float GetFloat( std::string strKey );
 
-	void SetBoolean( std::string strKey, bool bContent );
+	void SetBoolean( std::string strKey, bool* bContent );
 	bool GetBoolean( std::string strKey );
 
 	bool HasKey( std::string strKey );

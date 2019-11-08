@@ -1,5 +1,2 @@
-﻿  CEventEntity.cpp
-c:\perforce\gamercamps\pro2019\mod2\teachingandlearning\msc\homework\work\kwan.lai\simpleeventtemplate\event\cevententity.cpp(75): warning C4018: '<': signed/unsigned mismatch
-c:\perforce\gamercamps\pro2019\mod2\teachingandlearning\msc\homework\work\kwan.lai\simpleeventtemplate\event\cevententity.cpp(87): warning C4018: '<': signed/unsigned mismatch
-c:\perforce\gamercamps\pro2019\mod2\teachingandlearning\msc\homework\work\kwan.lai\simpleeventtemplate\event\cevententity.cpp(39): warning C4715: 'CEventEntity::Get': not all control paths return a value
-  Event.vcxproj -> C:\Perforce\GamerCamps\Pro2019\Mod2\TeachingAndLearning\MSc\Homework\Work\kwan.lai\SimpleEventTemplate\Debug\Event.exe
+﻿  Event.cpp
+  Event.vcxproj -> C:\Projects\BCU\Module_2_Homework\cpp_complex_event_system\Debug\Event.exe
