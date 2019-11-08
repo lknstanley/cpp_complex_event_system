@@ -13,7 +13,7 @@
     - specify different events by different names
 3. CEventEntity
     - store what values are passed through the event
-    - provide simple safe casting by limiting to pass `string`, `bool` and `float` type
+    - provide simple safe casting by limiting to pass `string`, `bool` and `float` types
 4. IEventListener
     - an interface for a class which needs to listen an event
 5. CDemoGame
