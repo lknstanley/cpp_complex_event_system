@@ -17,8 +17,8 @@ CDemoGame::~CDemoGame()
 {
 }
 
-void CDemoGame::VOnEvent( CEvent* pEvent, CEventEntity* pcEventData )
+void CDemoGame::VOnEvent( CEvent* pcEvent, CEventEntity* pcEventData )
 {
-	std::cout << "event name: " << pEvent->m_strName << std::endl;
+	std::cout << "event name: " << pcEvent->m_strName << std::endl;
 	std::cout << "event content (key: message): " << pcEventData->GetString( "message" ) << std::endl;
 }
